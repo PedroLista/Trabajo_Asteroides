@@ -123,6 +123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 500
+  explosion: {fileID: 0}
+  vida_enemigo: 2
+  puntuacion: 500
 --- !u!70 &6875509474133320483
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
