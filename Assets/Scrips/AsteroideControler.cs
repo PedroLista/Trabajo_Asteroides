@@ -27,7 +27,7 @@ public class AsteroideControler : MonoBehaviour
 
      public void Muerte()
      {
-         if (transform.localScale.x >= 0.75f)
+         if (transform.localScale.x >= 0.90f)
          { 
              GameObject temp1 = Instantiate(manager.asteroide, transform.position, transform.rotation);
              temp1.GetComponent<AsteroideControler>().manager = manager;

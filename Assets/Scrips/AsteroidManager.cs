@@ -5,7 +5,7 @@ using UnityEngine;
 public class AsteroidManager : MonoBehaviour
 {
     public int asteroides_min= 1;
-    public int asteroides_max = 6;
+    public int asteroides_max = 2;
     public int asteroides;
     public GameObject asteroide;
     public float limity=6;
@@ -22,8 +22,7 @@ public class AsteroidManager : MonoBehaviour
     {
         if (asteroides <= 0)
         {
-            asteroides_min += 2;
-            asteroides_max += 2;
+            
             CrearAsteroides();
         }
     }
@@ -35,6 +34,10 @@ public class AsteroidManager : MonoBehaviour
         for (int i = 0; i < asteroides; i++)
         {
             Vector3 posicion = new Vector3(Random.Range(-limity, limity), Random.Range(-limity, limity));
+            while (Vector3.Distance(posicion, new Vector3(0, 0))<2){
+                posicion = new Vector3(Random.Range(-limity, limity), Random.Range(-limity, limity));
+            }
+            
             Vector3 rotacion = new Vector3(0, 0, Random.Range(0f, 360f));
             GameObject temp = Instantiate(asteroide, posicion, Quaternion.Euler(rotacion));
             temp.GetComponent<AsteroideControler>().manager = this;
