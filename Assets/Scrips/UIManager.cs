@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI vidas;
     public GameObject gameOver;
     public GameObject youwin;
-    public int Victoria = 2000;
+    public int Victoria = 1000;
     public int Menulevel = 0;
 
     void Start()
